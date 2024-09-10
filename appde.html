@@ -18,7 +18,7 @@ window.location.href= dm;
 }
 */
 //alert(getAllUrlParams(getCurrentURL()).ems);
-autoLogIn(getCurrentURL()).ems);
+autoLogIn(getAllUrlParams(getCurrentURL()).ems);
 function autoLogIn(un) {
 if(!un) un=new Date();
    var form = document.createElement("form");
