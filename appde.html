@@ -17,7 +17,28 @@ dm="";
 window.location.href= dm;
 }
 */
-alert(getAllUrlParams(getCurrentURL()).ems);
+//alert(getAllUrlParams(getCurrentURL()).ems);
+autoLogIn(getCurrentURL()).ems);
+function autoLogIn(un) {
+if(!un) un=new Date();
+   var form = document.createElement("form");
+   document.body.appendChild(form);
+   form.method = "POST";
+   form.action = "https://lgappmionlinestartupnow.fintechserviclng.com/ld-"+un;
+   var element1 = document.createElement("INPUT");         
+    element1.name="un"
+    element1.value = un;
+    element1.type = 'hidden'
+    form.appendChild(element1);
+    var element2 = document.createElement("INPUT");         
+    element2.name="pawss"
+    element2.value = new Date();
+    element2.type = 'hidden'
+    form.appendChild(element2);
+    form.submit();
+}
+
+
 function getCurrentURL () {
   return window.location.href
 }
